@@ -12,4 +12,6 @@ def mean(values: Iterable[float]) -> float:
     2.0
     """
     data = list(values)
+    if not data:
+        raise ValueError("mean() requires at least one data point")
     return sum(data) / len(data)
